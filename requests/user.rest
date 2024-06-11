@@ -4,15 +4,15 @@ POST http://localhost:3002/api/users HTTP/1.1
 Content-Type: application/json
 
 {
-    "username":"errorlike",
+    "username":"errorlike@example.com",
     "name":"errorlike's name"
 }
 ###
 GET http://localhost:3002/api/users HTTP/1.1
 ###
-PUT http://localhost:3002/api/users/errorlike HTTP/1.1
+PUT http://localhost:3002/api/users/errorlike@example.com HTTP/1.1
 Content-Type: application/json
 
 {
-    "username":"error"
+    "username":"error1"
 }

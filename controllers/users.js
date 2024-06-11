@@ -8,12 +8,8 @@ router.get('/', async (request, response) => {
 });
 
 router.post('/', async (request, response) => {
-  try {
-    const user = await User.create(request.body);
-    response.json(user);
-  } catch (error) {
-    return response.status(400).json({ error });
-  }
+  const user = await User.create(request.body);
+  response.json(user);
 });
 
 router.get('/:id', async (request, response) => {
@@ -28,7 +24,7 @@ router.put('/:username', async (request, response) => {
   const user = await User.findOne({ where: { username: request.params.username } });
   if (user) {
     user.username = request.body.username;
-    user.save()
+    await user.save();
     response.json(user);
   } else {
     response.status(404).end();

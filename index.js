@@ -7,8 +7,8 @@ const blogsRouter = require('./controllers/blogs');
 const usersRouter = require('./controllers/users');
 
 const errorHandler = (error, request, response, next) => {
-  console.error(error.message);
-  console.error(error.name);
+  // console.error(error.message);
+  // console.error(error.name);
   if (error.name === 'SequelizeValidationError') {
     return response.status(400).send({ error: error.message });
   }
