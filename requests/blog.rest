@@ -2,9 +2,10 @@ GET http://localhost:3002/api/blogs HTTP/1.1
 ###
 POST http://localhost:3002/api/blogs HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVycm9ybGlrZUBleGFtcGxlLmNvbSIsImlkIjozLCJpYXQiOjE3MTg1NTIwMjZ9.3_AmIisG-YCyEKEyOJd6CG_iAKNJ2J5QQ0z4ELhlfx4
 
 {
-    "author":"Bob",
+    "author":"someBody",
     "url":"http://localhost",
     "title":"post"
 }
@@ -13,6 +14,7 @@ DELETE http://localhost:3002/api/blogs/13 HTTP/1.1
 
 ###
 POST http://localhost:3002/api/blogs HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVycm9ybGlrZUBleGFtcGxlLmNvbSIsImlkIjozLCJpYXQiOjE3MTg1NTIwMjZ9.3_AmIisG-YCyEKEyOJd6CG_iAKNJ2J5QQ0z4ELhlfx4
 Content-Type: application/json
 
 {

@@ -14,5 +14,5 @@ PUT http://localhost:3002/api/users/errorlike@example.com HTTP/1.1
 Content-Type: application/json
 
 {
-    "username":"error1"
+    "username":"error1@example.com"
 }
