@@ -11,7 +11,6 @@ const tokenExtractor = (req, res, next) => {
   const authorization = req.get('authorization');
   if (authorization && authorization.toLowerCase().startsWith('bearer ')) {
     try {
-      console.log(authorization.substring(7));
       req.decodedToken = jwt.verify(authorization.substring(7), SECRET);
     } catch {
       return res.status(401).json({ error: 'token invalid' });
@@ -32,10 +31,16 @@ router.post('/', tokenExtractor, async (request, response) => {
   response.status(201).json(blog);
 });
 
-router.delete('/:id', blogFinder, async (request, response) => {
-  if (request.blog) {
-    await request.blog.destroy();
-    response.status(204).end();
+router.delete('/:id', tokenExtractor, blogFinder, async (request, response) => {
+  const blog = request.blog;
+  if (blog) {
+    console.log(blog.userId);
+    if (blog.userId === request.decodedToken.id) {
+      await blog.destroy();
+      response.status(204).end();
+    } else {
+      response.status(403).end();
+    }
   }
 });
 

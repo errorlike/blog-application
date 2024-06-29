@@ -5,7 +5,7 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVycm9ybGlrZUBleGFtcGxlLmNvbSIsImlkIjozLCJpYXQiOjE3MTg1NTIwMjZ9.3_AmIisG-YCyEKEyOJd6CG_iAKNJ2J5QQ0z4ELhlfx4
 
 {
-    "author":"someBody",
+    "author":"tagema",
     "url":"http://localhost",
     "title":"post"
 }
@@ -34,3 +34,6 @@ Content-Type: application/json
 {
     "likes":20
 }
+###
+DELETE http://localhost:3002/api/blogs/4 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVycm9ybGlrZUBleGFtcGxlLmNvbSIsImlkIjozLCJpYXQiOjE3MTk2MzM2MzV9.Eiy8OkkfRc5gSA9Ya9kIIK4lZac9QThDVfk4YaPRk10
