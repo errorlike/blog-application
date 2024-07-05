@@ -1,6 +1,6 @@
 GET http://localhost:3002/api/blogs HTTP/1.1
 ###
-GET http://localhost:3002/api/blogs?search=po HTTP/1.1
+GET http://localhost:3002/api/blogs?search=post HTTP/1.1
 ###
 POST http://localhost:3002/api/blogs HTTP/1.1
 Content-Type: application/json
@@ -20,7 +20,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyc
 Content-Type: application/json
 
 {
-    "title":"third post"
+    "title":"ni post",
+    "url":"url",
+    "author":"errorlike"
 }
 ###
 PUT http://localhost:3002/api/blogs/1 HTTP/1.1
