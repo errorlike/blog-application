@@ -1,8 +1,9 @@
 const router = require('express').Router();
-const { Op } = require('sequelize');
+const { Op, fn } = require('sequelize');
 const { Blog, User } = require('../models');
 const { SECRET } = require('../util/config');
 const jwt = require('jsonwebtoken');
+const { sequelize } = require('../models/blog');
 const blogFinder = async (request, response, next) => {
   request.blog = await Blog.findByPk(request.params.id);
   next();
@@ -77,5 +78,16 @@ router.put('/:id', blogFinder, async (request, response) => {
   } else {
     response.status(404).end();
   }
+});
+router.get('/authors', async (request, response) => {
+  const authors = Blog.findAll({
+    attributes: ['author',
+      [sequelize.fn('SUM', sequelize.col('likes')), 'likes'],
+      [sequelize.fn('COUNT', sequelize.col('*')), 'articles']
+    ],
+    group: 'author',
+    order: [['likes', 'DESC']]
+  });
+  response.json(authors);
 });
 module.exports = router;

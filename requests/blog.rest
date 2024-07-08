@@ -4,28 +4,29 @@ GET http://localhost:3002/api/blogs?search=post HTTP/1.1
 ###
 POST http://localhost:3002/api/blogs HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVycm9ybGlrZUBleGFtcGxlLmNvbSIsImlkIjozLCJpYXQiOjE3MTg1NTIwMjZ9.3_AmIisG-YCyEKEyOJd6CG_iAKNJ2J5QQ0z4ELhlfx4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVycm9ybGlrZUBleGFtcGxlLmNvbSIsImlkIjoxLCJpYXQiOjE3MjAyODYyMTZ9.9FeSdL4WbTkRLJ9hUdG-BCRXF6GKEhFAGD3avGqdz1o
 
 {
-    "author":"tagema",
+    "author":"safsdfasd",
     "url":"http://localhost",
-    "title":"post"
+    "title":"dafsd post"
 }
 ###
 DELETE http://localhost:3002/api/blogs/13 HTTP/1.1
 
 ###
 POST http://localhost:3002/api/blogs HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVycm9ybGlrZUBleGFtcGxlLmNvbSIsImlkIjozLCJpYXQiOjE3MTg1NTIwMjZ9.3_AmIisG-YCyEKEyOJd6CG_iAKNJ2J5QQ0z4ELhlfx4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVycm9ybGlrZUBleGFtcGxlLmNvbSIsImlkIjoxLCJpYXQiOjE3MjAyODYyMTZ9.9FeSdL4WbTkRLJ9hUdG-BCRXF6GKEhFAGD3avGqdz1o
 Content-Type: application/json
 
 {
     "title":"ni post",
     "url":"url",
-    "author":"errorlike"
+    "author":"errorlike",
+    "likes":"42"
 }
 ###
-PUT http://localhost:3002/api/blogs/1 HTTP/1.1
+PUT http://localhost:3002/api/blogs/17 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -41,3 +42,5 @@ Content-Type: application/json
 ###
 DELETE http://localhost:3002/api/blogs/4 HTTP/1.1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVycm9ybGlrZUBleGFtcGxlLmNvbSIsImlkIjozLCJpYXQiOjE3MTk2MzM2MzV9.Eiy8OkkfRc5gSA9Ya9kIIK4lZac9QThDVfk4YaPRk10
+###
+GET http://localhost:3002/api/authors HTTP/1.1
