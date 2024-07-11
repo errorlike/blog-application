@@ -15,4 +15,16 @@ const tokenExtractor = (req, res, next) => {
   next()
 }
 
-module.exports = { tokenExtractor }
+
+const errorHandler = (error, request, response, next) => {
+  // console.error(error.message);
+  // console.error(error.name);
+  if (error.name === 'SequelizeValidationError') {
+    return response.status(400).send({ error: error.message });
+  }
+  if (error.name === 'SequelizeDatabaseError') {
+    return response.status(400).send({ error: 'malformatted id' });
+  }
+  next(error);
+};
+module.exports = { tokenExtractor,errorHandler }

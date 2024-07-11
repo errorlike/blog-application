@@ -4,12 +4,13 @@ GET http://localhost:3002/api/blogs?search=post HTTP/1.1
 ###
 POST http://localhost:3002/api/blogs HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVycm9ybGlrZUBleGFtcGxlLmNvbSIsImlkIjoxLCJpYXQiOjE3MjAyODYyMTZ9.9FeSdL4WbTkRLJ9hUdG-BCRXF6GKEhFAGD3avGqdz1o
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVycm9ybGlrZUBleGFtcGxlLmNvbSIsImlkIjoxLCJpYXQiOjE3MjA3MTcxMjF9.Tw2or10i1869Qm3eDWvf_An7YBEClbRR5kBt_XSE0rg
 
 {
     "author":"safsdfasd",
     "url":"http://localhost",
-    "title":"dafsd post"
+    "title":"dafsd post",
+    "year":2027
 }
 ###
 DELETE http://localhost:3002/api/blogs/13 HTTP/1.1
