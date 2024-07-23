@@ -7,10 +7,9 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVycm9ybGlrZUBleGFtcGxlLmNvbSIsImlkIjoxLCJpYXQiOjE3MjA3MTcxMjF9.Tw2or10i1869Qm3eDWvf_An7YBEClbRR5kBt_XSE0rg
 
 {
-    "author":"safsdfasd",
+    "author":"sfdaf",
     "url":"http://localhost",
-    "title":"dafsd post",
-    "year":2027
+    "title":"dafsd post"
 }
 ###
 DELETE http://localhost:3002/api/blogs/13 HTTP/1.1
