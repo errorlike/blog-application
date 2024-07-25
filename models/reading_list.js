@@ -16,13 +16,17 @@ ReadingList.init({
   blogId: {
     type: DataTypes.INTEGER,
     allowNull: false,
-    references: { model: 'blogs', key: 'id' }
+    references: { model: 'blogs', key: 'id' },
+  },
+  read: {
+    type: DataTypes.BOOLEAN
   }
+
 },
   {
     sequelize,
     underscored: true,
-    timestamps:false,
-    modelName: 'readingList'
+    timestamps: false,
+    modelName: 'readingLists'
   });
 module.exports = ReadingList;
