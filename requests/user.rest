@@ -4,8 +4,9 @@ POST http://localhost:3002/api/users HTTP/1.1
 Content-Type: application/json
 
 {
-    "username":"bob@example.com",
-    "name":"bob"
+    "username":"hellokitty@example.com",
+    "name":"hellokitty",
+    "disabled":true
 }
 ###
 GET http://localhost:3002/api/users HTTP/1.1

@@ -4,10 +4,10 @@ GET http://localhost:3002/api/blogs?search=post HTTP/1.1
 ###
 POST http://localhost:3002/api/blogs HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVycm9ybGlrZUBleGFtcGxlLmNvbSIsImlkIjoxLCJpYXQiOjE3MjA3MTcxMjF9.Tw2or10i1869Qm3eDWvf_An7YBEClbRR5kBt_XSE0rg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJvYkBleGFtcGxlLmNvbSIsImlkIjoyLCJpYXQiOjE3MjIyNDE4NTZ9.RVducLuC1jg6GV2gPXyNyhqRl14NvNTTfucsaI-9UTc
 
 {
-    "author":"sfdaf",
+    "author":"dsfsd",
     "url":"http://localhost",
     "title":"dafsd post"
 }
